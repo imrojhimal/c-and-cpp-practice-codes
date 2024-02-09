@@ -1,0 +1,74 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int a,b,i=1,j,st1,st2,st3,st4,st5=0,st6=0; //st=store /storing value
+    cin>>a>>b;
+   if(a>b)
+    {
+      while(i<=a)
+    {
+        st1=a%i;
+        if(st1==0)
+        {
+            st2=i;
+        }
+        for(j=1;j<=b;j++)
+        {
+          st3=b%j;
+          if(st3==0)
+          {
+              st4=j;
+          }
+        }
+      if(st2==st4)
+      {
+          st5=st2;
+          st6=st4;
+          if(st5>st6)
+          {
+              cout<<st5;
+          }
+          else
+          {
+              cout<<st6;
+          }
+      }
+     i++;
+     }
+    }
+   else
+   {
+         while(i<=b)
+    {
+        st1=b%i;
+        if(st1==0)
+        {
+            st2=i;
+        }
+        for(j=1;j<=a;j++)
+        {
+           st3=a%j;
+          if(st3==0)
+          {
+              st4=j;
+          }
+        }
+      if(st2==st4)
+      {
+          st5=st2;
+          st6=st4;
+          if(st5>st6)
+          {
+              cout<<st5;
+          }
+          else
+            {
+                cout<<st6;
+            }
+      }
+    i++;
+    }
+   }
+
+}
